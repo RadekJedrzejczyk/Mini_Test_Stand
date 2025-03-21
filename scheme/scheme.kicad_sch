@@ -1,0 +1,89 @@
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "2c39038c-6eda-4380-a425-abe6659b270f")
+	(paper "A4")
+	(lib_symbols)
+	(sheet
+		(at 27.94 29.21)
+		(size 73.66 64.77)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "c44ddb9b-97b1-4bf2-85fc-02b489f00eef")
+		(property "Sheetname" "power"
+			(at 27.94 28.4984 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "power.kicad_sch"
+			(at 27.94 94.5646 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "scheme"
+				(path "/2c39038c-6eda-4380-a425-abe6659b270f"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 140.97 29.21)
+		(size 82.55 67.31)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "ce5d5c7d-6f83-4fa3-9980-358feeb72227")
+		(property "Sheetname" "HMI_board"
+			(at 140.97 28.4984 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "hmi_board.kicad_sch"
+			(at 140.97 97.1046 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "scheme"
+				(path "/2c39038c-6eda-4380-a425-abe6659b270f"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+)

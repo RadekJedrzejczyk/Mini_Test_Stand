@@ -11,18 +11,20 @@
 //Controling diodoes
 #include "light_n_sound.h"
 
-#include <LiquidCrystal_I2C.h>
+//#include <LiquidCrystal_I2C.h>
 
 //PINS
 #define DOUT  3
 #define CLK  2
 #define POWERGATE 4
-#define DIODECONTR_ADDRESS 32
-#define REDIODE_EXP 0
-#define YELLOWDIODE_EXP 1
-#define GREENDIODE_EXP 2
-#define BLUEDIODE_EXP 3
-#define BUZZER_EXP 4
+
+#define DIODECONTR_I2C_ADDRESS 32
+#define REDIODE_EXPANDER 0
+#define YELLOWDIODE_EXPANDER 1
+#define GREENDIODE_EXPANDER 2
+#define BLUEDIODE_EXPANDER 3
+#define BUZZER_EXPANDER 4
+
 const int SPI_CS_PIN = 10;
 
 
@@ -30,6 +32,7 @@ const int SPI_CS_PIN = 10;
 ArduinoLEDMatrix LED_Matrix;
 HX711 scale;
 DFRobot_MCP2515 CAN(SPI_CS_PIN); //set CS pin
+
 PCF8574 expander;
 light_n_sound_controller light_n_sound_control;
 
@@ -39,11 +42,12 @@ void setup() {
   FrameModeTest(LED_Matrix);
   //initialiseCAN(CAN);
   // TensometryCalibration(scale, DOUT,CLK);
-  //pinMode(POWERGATE, OUTPUT);
-  //digitalWrite(POWERGATE, HIGH);
-  light_n_sound_control.setup(DIODECONTR_ADDRESS, REDIODE_EXP,YELLOWDIODE_EXP,GREENDIODE_EXP,BLUEDIODE_EXP,BUZZER_EXP);
-
+  pinMode(POWERGATE, OUTPUT);
+  digitalWrite(POWERGATE, HIGH);
+  //light_n_sound_control.setup(DIODECONTR_I2C_ADDRESS, REDIODE_EXPANDER,YELLOWDIODE_EXPANDER,GREENDIODE_EXPANDER,BLUEDIODE_EXPANDER,BUZZER_EXPANDER);
+  //light_n_sound_control.check();
   
 }
 void loop() {
+ 
  }
